@@ -8,6 +8,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,8 +36,8 @@ public class Home extends AppCompatActivity {
     List<String> yearList,sectionList;
     private ArrayAdapter yearAdapter, sectionAdapter;
     JSONObject branchObj;
-    String[] yearsArray;
     String brSelected, yrSelected, secSelected;
+    public RequestQueue rq;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +47,7 @@ public class Home extends AppCompatActivity {
         branchSpin = findViewById(R.id.branch_spinner);
         yearSpin = findViewById(R.id.year_spinner);
         sectionSpin = findViewById(R.id.section_spinner);
+        rq= Volley.newRequestQueue(this);
 
         yearList =new LinkedList<String>();
         sectionList =new LinkedList<String>();
@@ -135,7 +143,8 @@ public class Home extends AppCompatActivity {
         findViewById(R.id.btn_start).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Home.this,yrSelected+"\n"+brSelected+"\n"+secSelected , Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Home.this,yrSelected+"\n"+brSelected+"\n"+secSelected , Toast.LENGTH_SHORT).show();
+                downloadService();
             }
         });
 
@@ -163,7 +172,7 @@ public class Home extends AppCompatActivity {
         brSelected = br;
         yearList.clear();
         Set<String> years = getYears(br).keySet();
-        yearsArray = years.toArray(new String[years.size()]);
+        String[] yearsArray = years.toArray(new String[years.size()]);
         for(String y:yearsArray){
             yearList.add(y);
         }
@@ -189,7 +198,7 @@ public class Home extends AppCompatActivity {
     }
 
     public String loadJSONFromAsset() {
-        String json = null;
+        String json;
         try {
             InputStream is = getAssets().open("branchSectionList.json");
             int size = is.available();
@@ -204,4 +213,18 @@ public class Home extends AppCompatActivity {
         return json;
     }
 
+    public void downloadService(){
+        JsonObjectRequest request = new JsonObjectRequest(0, "http://disha-coer.co.in/it3c.json", null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Toast.makeText(Home.this, response.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Home.this, error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        rq.add(request);
+    }
 }
