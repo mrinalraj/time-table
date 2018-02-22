@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">timetable</string>
+    <string name="branch_prompt">Select your branch</string>
+    <string-array name="branch_spinner">
+        <item>Information Technology</item>
+        <item>Computer Science Engineering</item>
+        <item>Electronics Engineering</item>
+        <item>Electronics and Telecommunication Engineering</item>
+        <item>Mechanical engineering</item>
+        <item>Civil Engineering</item>
+        <item>Applied Electronics and Instrumentation</item>
+        <item>Plastic and Polymer Engineering</item>
+    </string-array>
+    <string-array name="year_spinner">
+        <item>1st year</item>
+        <item>2nd year</item>
+        <item>3rd year</item>
+        <item>4th year</item>
+    </string-array>
+    <string-array name="section_spinner">
+        <item>C</item>
+    </string-array>
+
+</resources>

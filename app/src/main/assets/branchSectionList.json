@@ -1,0 +1,179 @@
+{
+    "CSE": {
+        "1st year": {
+            "sections": [
+                "A",
+                "B"
+            ]
+        },
+        "2nd year": {
+            "sections": [
+                "A",
+                "B"
+            ]
+        },
+        "3rd year": {
+            "sections": [
+                "A",
+                "B"
+            ]
+        },
+        "4th year": {
+            "sections": [
+                "A",
+                "B"
+            ]
+        }
+    },
+    "IT": {
+        "1st year": {
+            "sections": [
+                "C"
+            ]
+        },
+        "2nd year": {
+            "sections": [
+                "C",
+                "D"
+            ]
+        },
+        "3rd year": {
+            "sections": [
+                "C",
+                "D"
+            ]
+        },
+        "4th year": {
+            "sections": [
+                "C"
+            ]
+        }
+    },
+    "EN": {
+        "1st year": {
+            "sections": [
+                "H"
+            ]
+        },
+        "2nd year": {
+            "sections": [
+                "H"
+            ]
+        },
+        "3rd year": {
+            "sections": [
+                "H",
+                "I"
+            ]
+        },
+        "4th year": {
+            "sections": [
+                "H",
+                "I"
+            ]
+        }
+    },
+    "ET": {
+        "1st year": {
+            "sections": [
+                "J"
+            ]
+        },
+        "2nd year": {
+            "sections": [
+                "J"
+            ]
+        },
+        "3rd year": {
+            "sections": [
+                "J",
+                "K"
+            ]
+        },
+        "4th year": {
+            "sections": [
+                "J",
+                "K"
+            ]
+        }
+    },
+    "ME": {
+        "1st year": {
+            "sections": [
+                "L"
+            ]
+        },
+        "2nd year": {
+            "sections": [
+                "L",
+                "M"
+            ]
+        },
+        "3rd year": {
+            "sections": [
+                "L",
+                "M"
+            ]
+        },
+        "4th year": {
+            "sections": [
+                "L",
+                "M"
+            ]
+        }
+    },
+    "CE": {
+        "1st year": {
+            "sections": [
+                "E"
+            ]
+        },
+        "2nd year": {
+            "sections": [
+                "E",
+                "F"
+            ]
+        },
+        "3rd year": {
+            "sections": [
+                "E",
+                "F"
+            ]
+        },
+        "4th year": {
+            "sections": [
+                "E",
+                "F"
+            ]
+        }
+    },
+    "AEI": {
+        "3rd year": {
+            "sections": [
+                "G"
+            ]
+        },
+        "4th year": {
+            "sections": [
+                "G"
+            ]
+        }
+    },
+    "PPE": {
+        "2nd year": {
+            "sections": [
+                "N"
+            ]
+        },
+        "3rd year": {
+            "sections": [
+                "N"
+            ]
+        },
+        "4th year": {
+            "sections": [
+                "N"
+            ]
+        }
+    }
+}
